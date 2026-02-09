@@ -106,8 +106,10 @@ function MonitorContent() {
       let buffer = '';
 
       const processLine = (line) => {
-        if (line.startsWith('data: ')) {
-          const dataContent = line.replace('data: ', '').trim();
+        // Handle CRLF line endings
+        const cleanLine = line.replace(/\r/g, '').trim();
+        if (cleanLine.startsWith('data: ')) {
+          const dataContent = cleanLine.replace('data: ', '').trim();
           if (dataContent === '[DONE]') {
             setIsStreaming(false);
             return;
