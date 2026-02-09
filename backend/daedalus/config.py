@@ -17,8 +17,20 @@ RETRY_CONFIG = HttpRetryOptions(
     http_status_codes=[429, 500, 503]
 )
 
-ACTIVE_FLASH_MODEL = Gemini(model=GEMINI_3_FLASH, retry_options=RETRY_CONFIG)
-ACTIVE_PRO_MODEL = Gemini(model=GEMINI_3_PRO, retry_options=RETRY_CONFIG)
+ACTIVE_FLASH_MODEL = Gemini(
+    model=GEMINI_3_FLASH,
+    retry_options=RETRY_CONFIG,
+    vertexai=True,
+    project="project-1023a394-e63c-4912-8ed",
+    location="global"
+)
+ACTIVE_PRO_MODEL = Gemini(
+    model=GEMINI_3_PRO,
+    retry_options=RETRY_CONFIG,
+    vertexai=True,
+    project="project-1023a394-e63c-4912-8ed",
+    location="global"
+)
 
 # Initialize Google GenAI client
 # Fallback to project ID and location if GOOGLE_API_KEY is not set
