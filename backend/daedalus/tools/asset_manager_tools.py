@@ -60,7 +60,7 @@ async def generate_image(
 
     config = types.GenerateContentConfig(
         image_config=image_config,
-        http_options=types.HttpOptions(timeout=60)
+        http_options=types.HttpOptions(timeout=90000)  # 90 seconds in milliseconds
     )
 
     max_retries = 3
