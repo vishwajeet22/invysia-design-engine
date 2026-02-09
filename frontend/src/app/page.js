@@ -123,7 +123,7 @@ export default function LandingPage() {
     <div className="h-full w-full overflow-y-auto p-8 flex flex-col items-center">
       <div className="bg-black/30 backdrop-blur-xl border border-white/10 p-8 rounded-2xl shadow-2xl w-full max-w-3xl space-y-8 animate-in fade-in zoom-in duration-500">
         <h1 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-purple-300">
-          Create New Order
+          Create New Web Page
         </h1>
 
         {/* Presets */}
@@ -156,7 +156,7 @@ export default function LandingPage() {
                 onChange={(e) => setDesignerComments(e.target.value)}
                 className="w-full p-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 focus:bg-white/10 transition-colors"
                 rows="3"
-                placeholder="Enter comments for the designer..."
+                placeholder="In a few lines describe the core idea of the design, e.g. 'A playful, high-energy theme inspired by fastfood'"
               />
             </div>
             <div>
@@ -166,7 +166,7 @@ export default function LandingPage() {
                 value={slug}
                 onChange={(e) => setSlug(e.target.value)}
                 className="w-full p-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 focus:bg-white/10 transition-colors"
-                placeholder="e.g., my-event-2026"
+                placeholder="Write fastfood to see website at https://demo.invysia.com/fastfood/"
               />
             </div>
           </div>
@@ -183,7 +183,7 @@ export default function LandingPage() {
               : 'bg-gray-800/50 text-gray-500 cursor-not-allowed border border-white/5'
               }`}
           >
-            {loading ? 'Processing...' : 'Place Order'}
+            {loading ? 'Processing...' : 'Start Design'}
           </button>
         </div>
 

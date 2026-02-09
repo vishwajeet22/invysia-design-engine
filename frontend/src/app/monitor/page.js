@@ -120,7 +120,7 @@ function MonitorContent() {
             const rawJson = JSON.parse(dataContent);
             if (rawJson.author) {
               const usage = rawJson.usageMetadata || {};
-              let title = rawJson.title || 'Untitled Event';
+              let title = rawJson.id || 'Untitled Event';
 
               if (rawJson.author === 'system' && rawJson.content?.parts?.[0]?.text) {
                 title = rawJson.content.parts[0].text.substring(0, 100) + '...';
