@@ -85,10 +85,10 @@ function MonitorContent() {
       const response = await fetch('/run_sse', {
         method: 'POST',
         body: JSON.stringify({
-          app_name: APP_NAME,
-          user_id: userIdRef.current,
-          session_id: sid,
-          new_message: {
+          appName: APP_NAME,
+          userId: userIdRef.current,
+          sessionId: sid,
+          newMessage: {
             parts: [{ text: inputPrompt }],
             role: 'user',
           },
